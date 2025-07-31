@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart University Transport System</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #004aad;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            padding: 30px;
+            max-width: 900px;
+            margin: auto;
+        }
+        h2 {
+            color: #004aad;
+        }
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            background-color: #004aad;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .bus-status {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Smart University Transport System 🚌</h1>
+    <p>Real-time Tracking | QR Attendance | Route Info</p>
+</header>
+
+<div class="container">
+
+    <div class="card">
+        <h2>🗺️ Bus Route Info</h2>
+        <p>Route A: Campus → City Center → Hostel</p>
+        <p>Route B: Hostel → Mall Road → Campus</p>
+    </div>
+
+    <div class="card">
+        <h2>📍 Check Real-Time Bus Location</h2>
+        <button onclick="showBusStatus()">Check Location</button>
+        <p id="busStatus" class="bus-status"></p>
+    </div>
+
+    <div class="card">
+        <h2>📲 Student QR Check-In</h2>
+        <p>QR Check-In feature is under development. Stay tuned for updates!</p>
+    </div>
+
+    <div class="card">
+        <h2>🔔 Predictive Alerts</h2>
+        <ul>
+            <li>Bus A expected to arrive in 8 minutes.</li>
+            <li>Bus B is delayed due to traffic.</li>
+        </ul>
+    </div>
+
+</div>
+
+<script>
+    function showBusStatus() {
+        const status = document.getElementById("busStatus");
+        const locations = [
+            "Bus A is near City Center",
+            "Bus B is approaching Hostel",
+            "Bus A is at Campus Gate",
+            "Bus B is at Mall Road"
+        ];
+        const randomLocation = locations[Math.floor(Math.random() * locations.length)];
+        status.innerText = randomLocation;
+    }
+</script>
+
+</body>
+</html>
